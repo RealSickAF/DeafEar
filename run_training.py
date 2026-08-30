@@ -2,7 +2,7 @@ import subprocess
 import sys
 from pathlib import Path
 
-repo = Path(r'E:\licenta\hand-gesture-recognition-mediapipe')
+repo = Path(__file__).resolve().parent
 default_nb = repo / 'point_history_classification.ipynb'
 nb = Path(sys.argv[1]) if len(sys.argv) > 1 else default_nb
 if not nb.is_absolute():
